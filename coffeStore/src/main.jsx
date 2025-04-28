@@ -6,6 +6,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import App from './App.jsx'
+import AddCoffe from './Components/AddCoffe.jsx';
+import UpdateCoffe from './Components/UpdateCoffe.jsx';
 
 
 const router = createBrowserRouter([
@@ -13,6 +15,14 @@ const router = createBrowserRouter([
     path: "/",
     element: <App></App>,
   },
+  {
+    path:'/addCofee',
+    element: <AddCoffe></AddCoffe>
+  },
+  {
+    path: '/updateCoffe',
+    element: <UpdateCoffe></UpdateCoffe>
+  }
 ]);
 createRoot(document.getElementById('root')).render(
   <StrictMode>
