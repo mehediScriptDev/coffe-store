@@ -2,9 +2,9 @@ import React from 'react';
 
 const UpdateCoffe = () => {
     return (
-        <div>
+        <section>
             <h2>update coffe section</h2>
-        </div>
+        </section>
     );
 };
 
