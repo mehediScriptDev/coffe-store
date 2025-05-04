@@ -8,6 +8,7 @@ export default {
     extend: {
       colors:{
         formbg: 'rgb(244, 243, 240)',
+        btnbg: 'rgb(210, 180, 140)',
       }
     },
   },
