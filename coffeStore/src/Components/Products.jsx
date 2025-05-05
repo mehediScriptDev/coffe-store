@@ -13,7 +13,7 @@ import { MdDelete } from "react-icons/md";
 const Products = () => {
   return (
     <section
-      className="min-h-screen relative mt-20 "
+      className=" relative mt-20 pb-10"
       style={{
         backgroundImage: `url(${banner})`,
         backgroundPosition: "center",
