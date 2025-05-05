@@ -1,22 +1,27 @@
 import React from "react";
 
 const AddCoffe = () => {
-    const submmitHandler = e => {
-        e.preventDefault();
-        const form = e.target;
-        const name = form.coffe.value;
-        const quantity = form.quantity.value;
-        const supplier = form.supplier.value;
-        const taste = form.taste.value;
-        const category = form.category.value;
-        const details = form.details.value;
-        const photo = form.photo.value;
-        
-        const product = {
-            name,quantity,supplier,taste,category,details,photo
-        }
-        console.log(product)
-    }
+  const submmitHandler = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.coffe.value;
+    const quantity = form.quantity.value;
+    const supplier = form.supplier.value;
+    const taste = form.taste.value;
+    const category = form.category.value;
+    const details = form.details.value;
+    const photo = form.photo.value;
+
+    const product = {
+      name,
+      quantity,
+      supplier,
+      taste,
+      category,
+      details,
+      photo,
+    };
+  };
   return (
     <section className="w-11/12 mx-auto bg-formbg py-3 px-3">
       <p className="text-3xl text-center font-bold">Add coffe</p>
@@ -34,7 +39,7 @@ const AddCoffe = () => {
           <label htmlFor="">
             <p>Coffe quantity:</p>
             <input
-            name="quantity"
+              name="quantity"
               type="text"
               placeholder="enter coffe quantity"
               className="border-2 px-10 rounded-md w-full h-7"
@@ -65,7 +70,7 @@ const AddCoffe = () => {
           <label htmlFor="">
             <p>Category:</p>
             <input
-            name="category"
+              name="category"
               type="text"
               placeholder="enter coffe name"
               className="border-2 px-10  rounded-md w-full h-7"
@@ -74,7 +79,6 @@ const AddCoffe = () => {
           <label htmlFor="">
             <p>Details:</p>
             <input
-
               type="text"
               name="details"
               placeholder="enter coffe quantity"
@@ -92,11 +96,13 @@ const AddCoffe = () => {
               className="border-2 px-10  rounded-md w-full h-7"
             />
           </label>
-        
-          
         </div>
         <div className="flex justify-center mt-4">
-        <input type="submit" className="btn bg-btnbg text-white w-1/3" value="Add" />
+          <input
+            type="submit"
+            className="btn bg-btnbg text-white w-1/3"
+            value="Add"
+          />
         </div>
       </form>
     </section>

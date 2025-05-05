@@ -9,6 +9,10 @@ export default {
       colors:{
         formbg: 'rgb(244, 243, 240)',
         btnbg: 'rgb(210, 180, 140)',
+      },
+      fontFamily:{
+        rancho: "Rancho",
+        raleway: "Raleway"
       }
     },
   },
