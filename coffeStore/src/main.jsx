@@ -17,21 +17,19 @@ const router = createBrowserRouter([
     path: "/",
     element: <App></App>,
     errorElement: <Error></Error>,
-    children:[
-      {
-        path:'/',
-        element: <Home></Home>
-      },
-      {
-        path:'/addCofee',
-        element: <AddCoffe></AddCoffe>
-      },
-      {
-        path: '/updateCoffe',
-        element: <UpdateCoffe></UpdateCoffe>
-      }
-    ]
+    
+     
+  
   },
+  
+  {
+    path:'/addCofee',
+    element: <AddCoffe></AddCoffe>
+  },
+  {
+    path: '/updateCoffe',
+    element: <UpdateCoffe></UpdateCoffe>
+  }
   
 ]);
 createRoot(document.getElementById('root')).render(

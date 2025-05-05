@@ -4,7 +4,7 @@ import Secondhero from "./Secondhero";
 
 const Home = () => {
   return (
-    <section className="md:min-h-screen">
+    <section className="md:min-h-screen pb-10">
       <section
      className="md:min-h-screen min-h-[94vh] hero relative flex items-center justify-center"
       style={{
@@ -12,6 +12,7 @@ const Home = () => {
         backgroundPosition: "center center",
         backgroundRepeat:'no-repeat',
         backgroundSize: "cover",
+        
         
       }}
     >

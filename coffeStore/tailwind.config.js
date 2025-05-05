@@ -11,6 +11,9 @@ export default {
         btnbg: 'rgb(210, 180, 140)',
         btncl: 'rgb(227, 181, 119)',
         iconbg: 'rgb(236, 234, 227);',
+        textcl:'rgb(51, 26, 21)',
+        littlebg: 'rgb(245, 244, 241);',
+        eyebg: ' rgb(210, 180, 140);',
       },
       fontFamily:{
         rancho: "Rancho",

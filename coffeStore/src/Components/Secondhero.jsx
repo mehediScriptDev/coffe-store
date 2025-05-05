@@ -18,25 +18,25 @@ const Secondhero = () => {
 
           <div className="px-3 py-4 col-span-1">
             <img src={icon2} alt="icon" />
-            <p className="md:text-3xl text-2xl font-rancho">Awesome Aroma</p>
+            <p className="md:text-3xl text-2xl font-rancho">High Quality</p>
             <p className="font-raleway text-sm">
-              You will definitely be a fan of the design & aroma of your coffee
+            We served the coffee to you maintaining the best quality
             </p>
           </div>
 
           <div className="px-3 py-4 col-span-1">
             <img src={icon3} alt="icon" />
-            <p className="md:text-3xl text-2xl font-rancho">Awesome Aroma</p>
+            <p className="md:text-3xl text-2xl font-rancho">Pure Grades</p>
             <p className="font-raleway text-sm">
-              You will definitely be a fan of the design & aroma of your coffee
+            The coffee is made of the green coffee beans which you will love
             </p>
           </div>
 
           <div className="px-3 py-4 col-span-1">
             <img src={icon4} alt="icon" />
-            <p className="md:text-3xl text-2xl font-rancho">Awesome Aroma</p>
+            <p className="md:text-3xl text-2xl font-rancho">Proper Roasting</p>
             <p className="font-raleway text-sm">
-              You will definitely be a fan of the design & aroma of your coffee
+            Your coffee is brewed by first roasting the green coffee beans
             </p>
           </div>
         </div>
