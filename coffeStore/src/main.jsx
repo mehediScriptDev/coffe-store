@@ -8,21 +8,26 @@ import {
 import App from './App.jsx'
 import AddCoffe from './Components/AddCoffe.jsx';
 import UpdateCoffe from './Components/UpdateCoffe.jsx';
+import Error from './Components/Error.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement: <Error></Error>,
+    children:[
+      {
+        path:'/addCofee',
+        element: <AddCoffe></AddCoffe>
+      },
+      {
+        path: '/updateCoffe',
+        element: <UpdateCoffe></UpdateCoffe>
+      }
+    ]
   },
-  {
-    path:'/addCofee',
-    element: <AddCoffe></AddCoffe>
-  },
-  {
-    path: '/updateCoffe',
-    element: <UpdateCoffe></UpdateCoffe>
-  }
+  
 ]);
 createRoot(document.getElementById('root')).render(
   <StrictMode>
