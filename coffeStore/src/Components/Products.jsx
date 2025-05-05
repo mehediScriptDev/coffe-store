@@ -20,14 +20,14 @@ const Products = () => {
         <p className="text-5xl font-bold text-textcl font-rancho text-center">
           Our Popular Products
         </p>
-        <div className="flex justify-center">
-          <button className="btn text-white bg-btnbg border-textcl mt-3 border-2 font-rancho">
+        <div className="flex justify-center mb-7">
+          <button className="btn text-white bg-btnbg border-textcl mt-3 border-2 font-raleway">
             Add coffe <GiCoffeeCup className="text-textcl" />
           </button>
         </div>
       </div>
 
-      <div className="w-11/12 mx-auto grid md:grid-cols-2 gap-2 gap-y-2 grid-cols-1">
+      <div className="w-11/12 mx-auto grid md:grid-cols-2 gap-4 gap-y-4 grid-cols-1">
         <div className="bg-littlebg col-span-1 rounded-md px-4 flex justify-between items-center">
           <div>
             <img src={coffecup1} alt="" />
