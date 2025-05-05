@@ -14,6 +14,7 @@ export default {
         textcl:'rgb(51, 26, 21)',
         littlebg: 'rgb(245, 244, 241);',
         eyebg: ' rgb(210, 180, 140);',
+       
       },
       fontFamily:{
         rancho: "Rancho",
