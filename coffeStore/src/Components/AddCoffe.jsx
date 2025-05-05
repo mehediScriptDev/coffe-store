@@ -1,4 +1,8 @@
-import React from "react";
+import { Link } from "react-router-dom";
+import Header from "../Header";
+import Footer from "./Footer";
+import herobg from "./images/more/1.png";
+import { LuMoveLeft } from "react-icons/lu";
 
 const AddCoffe = () => {
   const submmitHandler = (e) => {
@@ -23,88 +27,25 @@ const AddCoffe = () => {
     };
   };
   return (
-    <section className="w-11/12 mx-auto bg-formbg py-3 px-3">
-      <p className="text-3xl text-center font-bold">Add coffe</p>
-      <form onSubmit={submmitHandler}>
-        <div className="flex justify-center">
-          <label htmlFor="">
-            <p>Coffe Name:</p>
-            <input
-              type="text"
-              name="coffe"
-              placeholder="enter coffe name"
-              className="border-2 px-10  rounded-md w-full h-7"
-            />
-          </label>
-          <label htmlFor="">
-            <p>Coffe quantity:</p>
-            <input
-              name="quantity"
-              type="text"
-              placeholder="enter coffe quantity"
-              className="border-2 px-10 rounded-md w-full h-7"
-            />
-          </label>
+    <section >
+      <Header></Header>
+      <div
+        style={{
+          backgroundImage: `url(${herobg})`,
+          backgroundPosition: 'center',
+          backgroundSize: 'cover'
+        }}
+        className=" min-h-screen bg-formbg py-3 px-3"
+      >
+        <div className="w-11/12 mx-auto relative">
+        <Link to={'/'} className="flex items-center gap-2"><LuMoveLeft /><span className="text-3xl font-bold font-rancho">Back to home</span></Link>
+        <form>
+
+        </form>
+
         </div>
-        <div className="flex justify-center">
-          <label htmlFor="">
-            <p>Supplier:</p>
-            <input
-              type="text"
-              name="supplier"
-              placeholder="enter coffe name"
-              className="border-2 px-10  rounded-md w-full h-7"
-            />
-          </label>
-          <label htmlFor="">
-            <p>Taste:</p>
-            <input
-              type="text"
-              name="taste"
-              placeholder="enter coffe quantity"
-              className="border-2 px-10 rounded-md w-full h-7"
-            />
-          </label>
-        </div>
-        <div className="flex justify-center">
-          <label htmlFor="">
-            <p>Category:</p>
-            <input
-              name="category"
-              type="text"
-              placeholder="enter coffe name"
-              className="border-2 px-10  rounded-md w-full h-7"
-            />
-          </label>
-          <label htmlFor="">
-            <p>Details:</p>
-            <input
-              type="text"
-              name="details"
-              placeholder="enter coffe quantity"
-              className="border-2 px-10 rounded-md w-full h-7"
-            />
-          </label>
-        </div>
-        <div className="flex justify-center">
-          <label className="">
-            <p>photoURL</p>
-            <input
-              type="text"
-              name="photo"
-              placeholder="enter coffe name"
-              className="border-2 px-10  rounded-md w-full h-7"
-            />
-          </label>
-        </div>
-        <div className="flex justify-center mt-4">
-          <input
-            type="submit"
-            className="btn bg-btnbg text-white w-1/3"
-            value="Add"
-          />
-        </div>
-      </form>
+      </div>
+      <Footer></Footer>
     </section>
   );
 };

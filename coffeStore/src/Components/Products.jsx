@@ -9,6 +9,7 @@ import coffecup4 from "./images/4.png";
 import coffecup5 from "./images/5.png";
 import coffecup6 from "./images/6.png";
 import { MdDelete } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   return (
@@ -26,9 +27,9 @@ const Products = () => {
           Our Popular Products
         </p>
         <div className="flex justify-center mb-7">
-          <button className="btn text-white bg-btnbg border-textcl mt-3 border-2 font-raleway">
+          <Link to={'/addCofee'} className="btn text-white bg-btnbg border-textcl mt-3 border-2 font-raleway">
             Add coffe <GiCoffeeCup className="text-textcl" />
-          </button>
+          </Link>
         </div>
       </div>
 
