@@ -9,6 +9,7 @@ import App from './App.jsx'
 import AddCoffe from './Components/AddCoffe.jsx';
 import UpdateCoffe from './Components/UpdateCoffe.jsx';
 import Error from './Components/Error.jsx';
+import Home from './Components/Home.jsx';
 
 
 const router = createBrowserRouter([
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
     element: <App></App>,
     errorElement: <Error></Error>,
     children:[
+      {
+        path:'/',
+        element: <Home></Home>
+      },
       {
         path:'/addCofee',
         element: <AddCoffe></AddCoffe>
