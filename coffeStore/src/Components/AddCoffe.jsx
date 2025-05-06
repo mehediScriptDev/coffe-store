@@ -42,7 +42,7 @@ const AddCoffe = () => {
             <LuMoveLeft />
             <span className="text-3xl font-bold font-rancho">Back to home</span>
           </Link>
-          <div className="bg-formbg w-10/12 mx-auto">
+          <div className="bg-formbg w-10/12 mx-auto rounded-md">
             <div className=" space-y-3 w-10/12 mx-auto mt-3">
               <h1 className="font-rancho pt-3 text-4xl text-center">
                 Add New Coffee
@@ -55,45 +55,98 @@ const AddCoffe = () => {
                 here.
               </p>
               <form>
-                <div className="grid md:grid-cols-2 grid-cols-1 gap-3 justify-between">
-                  <label htmlFor="">
-                    <span>Name</span>
-                    <input type="text" name="name" placeholder="Enter coffe name" className="w-full px-3 h-8 rounded-md" id="" />
-                  </label>
-                  <label htmlFor="">
-                    <span>Chef</span>
-                    <input type="text" name="chef" placeholder="Enter chef name" className="w-full px-3 h-8 rounded-md" id="" />
-                  </label>
-                </div>
+                <div className="space-y-3 py-3 pb-8">
+                  <div className="grid md:grid-cols-2 grid-cols-1 gap-3 justify-between">
+                    <label htmlFor="">
+                      <span>Name</span>
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Enter coffe name"
+                        className="w-full px-3 h-8 rounded-md"
+                        id=""
+                      />
+                    </label>
+                    <label htmlFor="">
+                      <span>Chef</span>
+                      <input
+                        type="text"
+                        name="chef"
+                        placeholder="Enter chef name"
+                        className="w-full px-3 h-8 rounded-md"
+                        id=""
+                      />
+                    </label>
+                  </div>
 
-                <div className="grid md:grid-cols-2 grid-cols-1 gap-3 justify-between">
-                  <label htmlFor="">
-                    <span>Supplier</span>
-                    <input type="text" name="supplier" placeholder="Enter supplier name" className="w-full px-3 h-8 rounded-md" id="" />
-                  </label>
-                  <label htmlFor="">
-                    <span>Taste</span>
-                    <input type="text" name="taste" placeholder="Enter coffe taste" className="w-full px-3 h-8 rounded-md" id="" />
-                  </label>
-                </div>
+                  <div className="grid md:grid-cols-2 grid-cols-1 gap-3 justify-between">
+                    <label htmlFor="">
+                      <span>Supplier</span>
+                      <input
+                        type="text"
+                        name="supplier"
+                        placeholder="Enter supplier name"
+                        className="w-full px-3 h-8 rounded-md"
+                        id=""
+                      />
+                    </label>
+                    <label htmlFor="">
+                      <span>Taste</span>
+                      <input
+                        type="text"
+                        name="taste"
+                        placeholder="Enter coffe taste"
+                        className="w-full px-3 h-8 rounded-md"
+                        id=""
+                      />
+                    </label>
+                  </div>
 
-                <div className="grid md:grid-cols-2 grid-cols-1 gap-3 justify-between">
-                  <label htmlFor="">
-                    <span>Category</span>
-                    <input type="text" name="category" placeholder="Enter coffe category" className="w-full px-3 h-8 rounded-md" id="" />
-                  </label>
-                  <label htmlFor="">
-                    <span>Details</span>
-                    <input type="text" name="details" placeholder="Enter coffe details" className="w-full px-3 h-8 rounded-md" id="" />
-                  </label>
-                </div>
+                  <div className="grid md:grid-cols-2 grid-cols-1 gap-3 justify-between">
+                    <label htmlFor="">
+                      <span>Category</span>
+                      <input
+                        type="text"
+                        name="category"
+                        placeholder="Enter coffe category"
+                        className="w-full px-3 h-8 rounded-md"
+                        id=""
+                      />
+                    </label>
+                    <label htmlFor="">
+                      <span>Details</span>
+                      <input
+                        type="text"
+                        name="details"
+                        placeholder="Enter coffe details"
+                        className="w-full px-3 h-8 rounded-md"
+                        id=""
+                      />
+                    </label>
+                  </div>
 
-                <div className="">
-                  <label htmlFor="">
-                    <span>Photo</span>
-                    <input type="text" name="photo" placeholder="Enter photoURL" className="w-full px-3 h-8 rounded-md" id="" />
-                  </label>
-                  
+                  <div className="">
+                    <label htmlFor="">
+                      <span>Photo</span>
+                      <input
+                        type="text"
+                        name="photo"
+                        placeholder="Enter photoURL"
+                        className="w-full px-3 h-8 rounded-md"
+                        id=""
+                      />
+                    </label>
+                  </div>
+
+                  <div className="">
+                    <label htmlFor="">
+                      <input
+                        type="submit"
+                        className="btn bg-text bg-btnbg border-textcl w-full"
+                        value="Add Coffe"
+                      />
+                    </label>
+                  </div>
                 </div>
               </form>
             </div>
