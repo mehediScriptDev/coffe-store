@@ -8,8 +8,8 @@ const AddCoffe = () => {
   const submmitHandler = (e) => {
     e.preventDefault();
     const form = e.target;
-    const name = form.coffe.value;
-    const quantity = form.quantity.value;
+    const name = form.name.value;
+    const chef = form.chef.value;
     const supplier = form.supplier.value;
     const taste = form.taste.value;
     const category = form.category.value;
@@ -18,13 +18,14 @@ const AddCoffe = () => {
 
     const product = {
       name,
-      quantity,
+      chef,
       supplier,
       taste,
       category,
       details,
       photo,
     };
+    console.log(product)
   };
   return (
     <section>
@@ -44,17 +45,17 @@ const AddCoffe = () => {
           </Link>
           <div className="bg-formbg w-10/12 mx-auto rounded-md">
             <div className=" space-y-3 w-10/12 mx-auto mt-3">
-              <h1 className="font-rancho pt-3 text-4xl text-center">
+              <h1 className="font-rancho py-5 text-4xl text-center">
                 Add New Coffee
               </h1>
-              <p className="font-raleway text-sm text-center">
+              <p className="font-raleway text-[9px] py-5 md:text-sm text-center">
                 It is a long established fact that a reader will be distraceted
                 by the readable content of a page when looking at its layout.
                 The point of using Lorem Ipsum is that it has a more-or-less
                 normal distribution of letters, as opposed to using Content
                 here.
               </p>
-              <form>
+              <form onSubmit={submmitHandler}>
                 <div className="space-y-3 py-3 pb-8">
                   <div className="grid md:grid-cols-2 grid-cols-1 gap-3 justify-between">
                     <label htmlFor="">
@@ -142,7 +143,7 @@ const AddCoffe = () => {
                     <label htmlFor="">
                       <input
                         type="submit"
-                        className="btn bg-text bg-btnbg border-textcl w-full"
+                        className="btn bg-text bg-btnbg font-rancho border-textcl w-full"
                         value="Add Coffe"
                       />
                     </label>
