@@ -23,7 +23,7 @@ const AddCoffe = () => {
       taste,
       category,
       details,
-      photo,
+      photo
     };
     console.log(product)
   };
