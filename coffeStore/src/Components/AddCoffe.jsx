@@ -23,18 +23,18 @@ const AddCoffe = () => {
       taste,
       category,
       details,
-      photo
+      photo,
     };
     // send to backend
-    fetch('http://localhost:5000/coffe',{
-      method: 'POST',
+    fetch("http://localhost:5000/coffe", {
+      method: "POST",
       headers: {
-        'content-type':'application/json'
+        "content-type": "application/json",
       },
-      body: JSON.stringify(product)
+      body: JSON.stringify(product),
     })
-    .then(res=>res.json())
-    .then(data=>console.log(data))
+      .then((res) => res.json())
+      .then((data) => console.log(data));
   };
   return (
     <section>
@@ -70,6 +70,7 @@ const AddCoffe = () => {
                     <label htmlFor="">
                       <span>Name</span>
                       <input
+                        required
                         type="text"
                         name="name"
                         placeholder="Enter coffe name"
@@ -80,6 +81,7 @@ const AddCoffe = () => {
                     <label htmlFor="">
                       <span>Chef</span>
                       <input
+                        required
                         type="text"
                         name="chef"
                         placeholder="Enter chef name"
@@ -93,6 +95,7 @@ const AddCoffe = () => {
                     <label htmlFor="">
                       <span>Supplier</span>
                       <input
+                        required
                         type="text"
                         name="supplier"
                         placeholder="Enter supplier name"
@@ -103,6 +106,7 @@ const AddCoffe = () => {
                     <label htmlFor="">
                       <span>Taste</span>
                       <input
+                        required
                         type="text"
                         name="taste"
                         placeholder="Enter coffe taste"
@@ -116,6 +120,7 @@ const AddCoffe = () => {
                     <label htmlFor="">
                       <span>Category</span>
                       <input
+                        required
                         type="text"
                         name="category"
                         placeholder="Enter coffe category"
@@ -126,6 +131,7 @@ const AddCoffe = () => {
                     <label htmlFor="">
                       <span>Details</span>
                       <input
+                        required
                         type="text"
                         name="details"
                         placeholder="Enter coffe details"
@@ -139,6 +145,7 @@ const AddCoffe = () => {
                     <label htmlFor="">
                       <span>Photo</span>
                       <input
+                        required
                         type="text"
                         name="photo"
                         placeholder="Enter photoURL"
@@ -151,6 +158,7 @@ const AddCoffe = () => {
                   <div className="">
                     <label htmlFor="">
                       <input
+                        required
                         type="submit"
                         className="btn bg-text bg-btnbg font-rancho border-textcl w-full"
                         value="Add Coffe"
