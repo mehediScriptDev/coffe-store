@@ -3,7 +3,7 @@ import Header from "../Header";
 import Footer from "./Footer";
 import herobg from "./images/more/11.png";
 import { LuMoveLeft } from "react-icons/lu";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 
 const AddCoffe = () => {
   const submmitHandler = (e) => {
@@ -16,6 +16,7 @@ const AddCoffe = () => {
     const category = form.category.value;
     const details = form.details.value;
     const photo = form.photo.value;
+    const price = form.price.value;
 
     const product = {
       name,
@@ -25,6 +26,7 @@ const AddCoffe = () => {
       category,
       details,
       photo,
+      price,
     };
     // send to backend
     fetch("http://localhost:5000/coffe", {
@@ -36,25 +38,14 @@ const AddCoffe = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data.insertId) {
+        if (data.insertedId) {
           Swal.fire({
-            title: "Custom animation with Animate.css",
-            showClass: {
-              popup: `
-      animate__animated
-      animate__fadeInUp
-      animate__faster
-    `,
-            },
-            hideClass: {
-              popup: `
-      animate__animated
-      animate__fadeOutDown
-      animate__faster
-    `,
-            },
+            title: "Coffee Added to your server!",
+            icon: "success",
+            draggable: true,
           });
         }
+        e.target.reset();
       });
   };
   return (
@@ -170,6 +161,19 @@ const AddCoffe = () => {
                         type="text"
                         name="photo"
                         placeholder="Enter photoURL"
+                        className="w-full px-3 h-8 rounded-md"
+                        id=""
+                      />
+                    </label>
+                  </div>
+                  <div className="">
+                    <label htmlFor="">
+                      <span>Price</span>
+                      <input
+                        required
+                        type="text"
+                        name="price"
+                        placeholder="Enter coffe price"
                         className="w-full px-3 h-8 rounded-md"
                         id=""
                       />
