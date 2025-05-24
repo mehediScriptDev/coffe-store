@@ -33,6 +33,16 @@ const Products = () => {
         </div>
       </div>
 
+      {/* images link
+      
+      https://i.ibb.co/Z6QzLfTq/1.png
+      https://i.ibb.co/xSL8N0NV/2.png
+      https://i.ibb.co/fYy6Kd8S/3.png
+      https://i.ibb.co/JRpFZ11S/4.png
+      https://i.ibb.co/bMd5RLx0/5.png
+      https://i.ibb.co/xSFTb0x1/6.png
+      */}
+
       <div className="w-10/12 mx-auto grid md:grid-cols-2 gap-4 gap-y-4 grid-cols-1">
         <div className="bg-littlebg col-span-1 rounded-md px-4 flex justify-between items-center">
           <div>

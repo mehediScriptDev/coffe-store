@@ -3,6 +3,7 @@ import Header from "../Header";
 import Footer from "./Footer";
 import herobg from "./images/more/11.png";
 import { LuMoveLeft } from "react-icons/lu";
+import Swal from 'sweetalert2'
 
 const AddCoffe = () => {
   const submmitHandler = (e) => {
@@ -34,7 +35,27 @@ const AddCoffe = () => {
       body: JSON.stringify(product),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        if (data.insertId) {
+          Swal.fire({
+            title: "Custom animation with Animate.css",
+            showClass: {
+              popup: `
+      animate__animated
+      animate__fadeInUp
+      animate__faster
+    `,
+            },
+            hideClass: {
+              popup: `
+      animate__animated
+      animate__fadeOutDown
+      animate__faster
+    `,
+            },
+          });
+        }
+      });
   };
   return (
     <section>
