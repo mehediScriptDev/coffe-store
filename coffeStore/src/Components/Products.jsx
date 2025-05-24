@@ -27,10 +27,11 @@ const Products = () => {
         <p className="text-5xl font-bold text-textcl font-rancho text-center">
           Our Popular Products
         </p>
-        <div className="flex justify-center mb-7">
+        <div className="flex justify-center gap-1 mb-7">
           <Link to={'/addCofee'} className="btn text-white bg-btnbg border-textcl mt-3 border-2 font-raleway">
             Add coffe <GiCoffeeCup className="text-textcl" />
           </Link>
+          
         </div>
       </div>
 
