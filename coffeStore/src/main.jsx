@@ -17,9 +17,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <App></App>,
     errorElement: <Error></Error>,
-    
-     
-  
+    loader: ()=>fetch('http://localhost:5000/coffe')
   },
   
   {
