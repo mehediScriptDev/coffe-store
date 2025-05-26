@@ -15,7 +15,6 @@ const UpdateCoffe = () => {
     const taste = form.taste.value;
     const category = form.category.value;
     const details = form.details.value;
-    const photo = form.photo.value;
     const price = form.price.value;
 
     const product = {
@@ -25,12 +24,11 @@ const UpdateCoffe = () => {
       taste,
       category,
       details,
-      photo,
       price,
     };
     // send to backend
     fetch(`http://localhost:5000/coffe/${_id}`,{
-      method: 'put',
+      method: 'PUT',
       headers: {
         'content-type':'application/json'
       },
@@ -38,7 +36,7 @@ const UpdateCoffe = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data.insertedId) {
+        if (data.modifiedCount >0) {
           Swal.fire({
             title: "Coffee Added to your server!",
             icon: "success",
