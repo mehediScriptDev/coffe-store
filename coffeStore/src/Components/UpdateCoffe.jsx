@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { data, Link, useLoaderData } from "react-router-dom";
 import Header from "../Header";
 import Footer from "./Footer";
 import herobg from "./images/more/11.png";
@@ -6,35 +6,52 @@ import { LuMoveLeft } from "react-icons/lu";
 import Swal from "sweetalert2";
 
 const UpdateCoffe = () => {
-    const submmitHandler = (e) => {
-        e.preventDefault();
-        const form = e.target;
-        const name = form.name.value;
-        const chef = form.chef.value;
-        const supplier = form.supplier.value;
-        const taste = form.taste.value;
-        const category = form.category.value;
-        const details = form.details.value;
-        const photo = form.photo.value;
-        const price = form.price.value;
-    
-        const product = {
-          name,
-          chef,
-          supplier,
-          taste,
-          category,
-          details,
-          photo,
-          price,
-        };
-        // send to backend
-        
-      };
-      const coffes = useLoaderData();
-      const { _id, name, price, chef, photo,details,category,taste,supplier } = coffes;
-    return (
-        <section>
+  const submmitHandler = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const chef = form.chef.value;
+    const supplier = form.supplier.value;
+    const taste = form.taste.value;
+    const category = form.category.value;
+    const details = form.details.value;
+    const photo = form.photo.value;
+    const price = form.price.value;
+
+    const product = {
+      name,
+      chef,
+      supplier,
+      taste,
+      category,
+      details,
+      photo,
+      price,
+    };
+    // send to backend
+    fetch(`http://localhost:5000/coffe/${_id}`,{
+      method: 'put',
+      headers: {
+        'content-type':'application/json'
+      },
+      body:JSON.stringify(product)
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Coffee Added to your server!",
+            icon: "success",
+            draggable: true,
+          });
+        }
+      });
+  };
+  const coffes = useLoaderData();
+  const { _id, name, price, chef, photo, details, category, taste, supplier } =
+    coffes;
+  return (
+    <section>
       <Header></Header>
       <div
         style={{
@@ -52,10 +69,11 @@ const UpdateCoffe = () => {
           <div className="bg-formbg w-10/12 mx-auto rounded-md">
             <div className=" space-y-3 w-10/12 mx-auto mt-3">
               <h1 className="font-rancho py-5 text-4xl text-center">
-               Update {name}
+                Update {name}
               </h1>
               <p className="font-raleway text-[9px] py-5 md:text-sm text-center">
-                Details: {details}, Category: {category}, Taste: {taste},Supplier: {supplier}
+                Details: {details}, Category: {category}, Taste: {taste}
+                ,Supplier: {supplier}
               </p>
               <form onSubmit={submmitHandler}>
                 <div className="space-y-3 py-3 pb-8">
@@ -63,7 +81,7 @@ const UpdateCoffe = () => {
                     <label htmlFor="">
                       <span>Name</span>
                       <input
-                      defaultValue={name}
+                        defaultValue={name}
                         required
                         type="text"
                         name="name"
@@ -75,7 +93,7 @@ const UpdateCoffe = () => {
                     <label htmlFor="">
                       <span>Chef</span>
                       <input
-                      defaultValue={chef}
+                        defaultValue={chef}
                         required
                         type="text"
                         name="chef"
@@ -90,7 +108,7 @@ const UpdateCoffe = () => {
                     <label htmlFor="">
                       <span>Supplier</span>
                       <input
-                      defaultValue={supplier}
+                        defaultValue={supplier}
                         required
                         type="text"
                         name="supplier"
@@ -102,7 +120,7 @@ const UpdateCoffe = () => {
                     <label htmlFor="">
                       <span>Taste</span>
                       <input
-                      defaultValue={taste}
+                        defaultValue={taste}
                         required
                         type="text"
                         name="taste"
@@ -117,7 +135,7 @@ const UpdateCoffe = () => {
                     <label htmlFor="">
                       <span>Category</span>
                       <input
-                      defaultValue={category}
+                        defaultValue={category}
                         required
                         type="text"
                         name="category"
@@ -143,7 +161,7 @@ const UpdateCoffe = () => {
                     <label htmlFor="">
                       <span>Price</span>
                       <input
-                      defaultValue={price}
+                        defaultValue={price}
                         required
                         type="text"
                         name="price"
@@ -172,7 +190,7 @@ const UpdateCoffe = () => {
       </div>
       <Footer></Footer>
     </section>
-    );
+  );
 };
 
 export default UpdateCoffe;
