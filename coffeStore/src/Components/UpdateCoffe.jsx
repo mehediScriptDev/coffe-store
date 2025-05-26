@@ -48,7 +48,7 @@ const UpdateCoffe = () => {
       });
   };
   const coffes = useLoaderData();
-  const { _id, name, price, chef, photo, details, category, taste, supplier } =
+  const { _id, name, price, chef, details, category, taste, supplier } =
     coffes;
   return (
     <section>
