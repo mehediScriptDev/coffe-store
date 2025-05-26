@@ -1,4 +1,4 @@
-import { data, Link, useLoaderData } from "react-router-dom";
+import { data, Link, useLoaderData, useNavigate } from "react-router-dom";
 import Header from "../Header";
 import Footer from "./Footer";
 import herobg from "./images/more/11.png";
@@ -6,6 +6,7 @@ import { LuMoveLeft } from "react-icons/lu";
 import Swal from "sweetalert2";
 
 const UpdateCoffe = () => {
+  const navigate =useNavigate();
   const submmitHandler = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -38,10 +39,11 @@ const UpdateCoffe = () => {
       .then((data) => {
         if (data.modifiedCount >0) {
           Swal.fire({
-            title: "Coffee Added to your server!",
+            title: "Coffee updated successfullly!",
             icon: "success",
             draggable: true,
           });
+          navigate('/')
         }
       });
   };
